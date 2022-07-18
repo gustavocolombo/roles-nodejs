@@ -1,6 +1,7 @@
 import {
-  Column, CreateDateColumn, Entity, PrimaryGeneratedColumn,
+  Column, CreateDateColumn, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn,
 } from 'typeorm';
+import { Roles } from './Roles';
 
 @Entity('users')
 export class Users {
@@ -15,6 +16,14 @@ export class Users {
 
   @Column()
     password: string;
+
+  @ManyToMany(() => Roles)
+  @JoinTable({
+    name: 'users_roles',
+    joinColumns: [{ name: 'user_id' }],
+    inverseJoinColumns: [{ name: 'role_id' }],
+  })
+    roles: Roles[];
 
   @CreateDateColumn()
     created_at: Date;
