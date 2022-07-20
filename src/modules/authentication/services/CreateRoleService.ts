@@ -1,7 +1,7 @@
 import { getRepository } from 'typeorm';
 import { ICreateRoleDTO } from '../dtos/ICrateRoleDTO';
-import { Permissions } from '../models/Permissions';
-import { Roles } from '../models/Roles';
+import { Permissions } from '../infra/typeorm/entities/Permissions';
+import { Roles } from '../infra/typeorm/entities/Roles';
 
 export class CreateRoleService {
   public async execute({ name, description, permissions }: ICreateRoleDTO): Promise<Roles> {

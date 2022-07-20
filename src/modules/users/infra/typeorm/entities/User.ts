@@ -1,7 +1,7 @@
 import {
   Column, CreateDateColumn, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn,
 } from 'typeorm';
-import { Roles } from './Roles';
+import { Roles } from '../../../../authentication/infra/typeorm/entities/Roles';
 
 @Entity('users')
 export class Users {

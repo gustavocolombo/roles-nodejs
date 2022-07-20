@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { CreateRoleService } from '../services/CreateRoleService';
+import { CreateRoleService } from '../../../services/CreateRoleService';
 
 const rolesRoutes = Router();
 

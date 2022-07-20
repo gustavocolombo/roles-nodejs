@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 import { ICreatePermissionDTO } from '../dtos/ICreatePermissionDTO';
-import { Permissions } from '../models/Permissions';
+import { Permissions } from '../infra/typeorm/entities/Permissions';
 
 export class CreatePermissionsService {
   public async execute({ name, description }: ICreatePermissionDTO): Promise<Permissions> {

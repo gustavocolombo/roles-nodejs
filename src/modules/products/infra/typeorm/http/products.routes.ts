@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { is } from '../middlewares/permission';
-import { CreateProductsService } from '../services/CreateProductsService';
+import { is } from '../../../../shared/middlewares/permission';
+import { CreateProductsService } from '../../../services/CreateProductsService';
 
 const productsRoutes = Router();
 

@@ -1,8 +1,8 @@
 import { getRepository } from 'typeorm';
 import { hash } from 'bcryptjs';
 import { ICreateUserDTO } from '../dtos/ICreateUserDTO';
-import { Users } from '../models/User';
-import { Roles } from '../models/Roles';
+import { Users } from '../infra/typeorm/entities/User';
+import { Roles } from '../../authentication/infra/typeorm/entities/Roles';
 
 export class CreateUserService {
   public async execute({

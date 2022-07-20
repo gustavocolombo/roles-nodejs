@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 import { ICreateProductsDTO } from '../dtos/ICreateProductsDTO';
-import { Products } from '../models/Products';
+import { Products } from '../infra/typeorm/entities/Products';
 
 export class CreateProductsService {
   public async execute({ name, description }: ICreateProductsDTO): Promise<Products> {

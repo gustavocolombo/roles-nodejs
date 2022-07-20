@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { decode } from 'jsonwebtoken';
 import { getRepository } from 'typeorm';
-import { Users } from '../models/User';
+import { Users } from '../../users/infra/typeorm/entities/User';
 
 async function decodeToken(request: Request) {
   const authHeader = request.headers.authorization || '';

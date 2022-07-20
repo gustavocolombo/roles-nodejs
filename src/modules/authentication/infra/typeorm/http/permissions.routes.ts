@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { CreatePermissionsService } from '../services/CreatePermissionsService';
+import { CreatePermissionsService } from '../../../services/CreatePermissionsService';
 
 const permissionsRoutes = Router();
 

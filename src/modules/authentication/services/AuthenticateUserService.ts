@@ -1,9 +1,9 @@
 import { compare } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
 import { getRepository } from 'typeorm';
-import authconfig from '../config/authconfig';
+import authconfig from '../../shared/config/authconfig';
 import { IAuthenticateUserDTO } from '../dtos/IAuthenticateLoginDTO';
-import { Users } from '../models/User';
+import { Users } from '../../users/infra/typeorm/entities/User';
 
 interface IResponseLogin{
   user: Users;
